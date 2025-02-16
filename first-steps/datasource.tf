@@ -22,3 +22,14 @@ data "aws_ami" "ubuntu" {
 
   owners = ["099720109477"] # Canonical, AmazonID
 }
+
+
+data "aws_acm_certificate" "issued_cert" {
+  domain       = "*.kubeigu.plainandplane.com"
+  types     = ["AMAZON_ISSUED"]
+  most_recent = true
+}
+
+data "aws_caller_identity" "current" {}
+
+data "aws_region" "current" {}
