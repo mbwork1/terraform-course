@@ -59,13 +59,13 @@ sudo nginx -t
 # Reload Nginx to apply changes
 sudo systemctl reload nginx
 
-# Obtain an SSL certificate using Certbot and configure Nginx
-sudo certbot --nginx -d jenkins.test.kubeigu.plainandplane.com --email tdwaws2024@gmail.com --non-interactive --agree-tos --redirect
+# # Obtain an SSL certificate using Certbot and configure Nginx
+# sudo certbot --nginx -d jenkins.test.kubeigu.plainandplane.com --email tdwaws2024@gmail.com --non-interactive --agree-tos --redirect
 
-# Setup a cron job to automatically renew the certificate
-echo "0 0 * * * /usr/bin/certbot renew --quiet" | sudo tee -a /etc/crontab > /dev/null
+# # Setup a cron job to automatically renew the certificate
+# echo "0 0 * * * /usr/bin/certbot renew --quiet" | sudo tee -a /etc/crontab > /dev/null
 
-# Restart Nginx to apply SSL configuration
-sudo systemctl restart nginx
+# # Restart Nginx to apply SSL configuration
+# sudo systemctl restart nginx
 
-echo "Jenkins is now accessible via https://jenkins.test.kubeigu.plainandplane.com"
+# echo "Jenkins is now accessible via https://jenkins.test.kubeigu.plainandplane.com"
