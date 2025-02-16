@@ -2,9 +2,9 @@ data "terraform_remote_state" "first-steps" {
   backend = "s3"
 
   config = {
-    bucket = "terraform-a49cd32"
-    key    = "first-steps/terraform.tfstate"
-    region = "us-east-1"
+    key            = "first-steps/terraform.state"
+    bucket         = "zlion-tfbucket"
+    region         = "us-east-2"
   }
 }
 
