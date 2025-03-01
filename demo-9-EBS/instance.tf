@@ -10,6 +10,10 @@ resource "aws_instance" "example" {
 
   # the public SSH key
   key_name = aws_key_pair.igu-key.key_name
+
+  # root_block_device {
+  #   volume_size = 16
+  # }
 }
 
 resource "aws_ebs_volume" "ebs-volume-1" {

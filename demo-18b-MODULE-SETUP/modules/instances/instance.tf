@@ -13,7 +13,8 @@ variable "VPC_ID" {
 }
 
 variable "PATH_TO_PUBLIC_KEY" {
-  default = "mykey.pub"
+  default = "igu-key.pub"
+  //default = "~/Downloads/igu-key.pub"
 }
 
 data "aws_ami" "ubuntu" {
@@ -43,7 +44,7 @@ resource "aws_instance" "instance" {
   vpc_security_group_ids = [aws_security_group.allow-ssh.id]
 
   # the public SSH key
-  key_name = aws_key_pair.mykeypair.key_name
+  key_name = aws_key_pair.igu-key.key_name
 
   tags = {
     Name         = "instance-${var.ENV}"
@@ -76,8 +77,9 @@ resource "aws_security_group" "allow-ssh" {
   }
 }
 
-resource "aws_key_pair" "mykeypair" {
-  key_name   = "mykeypair-${var.ENV}"
+resource "aws_key_pair" "igu-key" {
+  key_name   = "igu-key-${var.ENV}"
   public_key = file("${path.root}/${var.PATH_TO_PUBLIC_KEY}")
+  //public_key = file("${var.PATH_TO_PUBLIC_KEY}")
 }
 

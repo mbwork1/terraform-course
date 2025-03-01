@@ -1,8 +1,7 @@
-resource "aws_key_pair" "mykeypair" {
-  key_name   = "mykeypair"
-  public_key = file(var.PATH_TO_PUBLIC_KEY)
+resource "aws_key_pair" "igu-key" {
+  key_name   = "igu-key"
+  public_key = file(var.igu-key-public)
   lifecycle {
     ignore_changes = [public_key]
   }
 }
-

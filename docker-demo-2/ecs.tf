@@ -7,7 +7,7 @@ resource "aws_launch_template" "ecs-example-launchconfig" {
   name                                 = "ecs-launchconfig"
   image_id                             = var.ECS_AMIS[var.AWS_REGION]
   instance_type                        = var.ECS_INSTANCE_TYPE
-  key_name                             = aws_key_pair.mykeypair.key_name
+  key_name                             = aws_key_pair.igu-key.key_name
   instance_initiated_shutdown_behavior = "terminate"
 
   iam_instance_profile {

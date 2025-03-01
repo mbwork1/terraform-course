@@ -1,13 +1,13 @@
 variable "AWS_REGION" {
-  default = "eu-west-1"
+  default = "us-east-2"
 }
 
-variable "PATH_TO_PRIVATE_KEY" {
-  default = "mykey"
+variable "igu-key-private" {
+  default = "~/Downloads/igu-key.pem"
 }
 
-variable "PATH_TO_PUBLIC_KEY" {
-  default = "mykey.pub"
+variable "igu-key-public" {
+  default = "~/Downloads/igu-key.pub"
 }
 
 variable "ECS_INSTANCE_TYPE" {
@@ -17,9 +17,9 @@ variable "ECS_INSTANCE_TYPE" {
 variable "ECS_AMIS" {
   type = map(string)
   default = {
-    us-east-1 = "ami-1924770e"
-    us-west-2 = "ami-56ed4936"
-    eu-west-1 = "ami-c8337dbb"
+    us-east-2 = "ami-0d635f3367bb86b3e" #ECS Optimized Amazon Linux 2 AMI
+    us-west-2 = "ami-06b94666"
+    eu-west-1 = "ami-844e0bf7"
   }
 }
 

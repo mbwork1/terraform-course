@@ -10,7 +10,7 @@ variable "igu-key-public" {
   default = "~/Downloads/igu-key.pub"
 }
 
-variable "ami_id" {
+variable "AMIS" {
   type = map(string)
   default = {
     us-east-2 = "ami-0f6bd2f212e409001"
@@ -18,3 +18,8 @@ variable "ami_id" {
     eu-west-1 = "ami-844e0bf7"
   }
 }
+
+variable "RDS_PASSWORD" {
+  default = "Test123$"
+}
+

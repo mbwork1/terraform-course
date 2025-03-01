@@ -9,14 +9,14 @@ resource "aws_instance" "jenkins-instance" {
   vpc_security_group_ids = [aws_security_group.jenkins-securitygroup.id]
 
   # the public SSH key
-  key_name = aws_key_pair.mykeypair.key_name
+  key_name = aws_key_pair.igu-key.key_name
 
   # user data
   user_data = data.cloudinit_config.cloudinit-jenkins.rendered
 }
 
 resource "aws_ebs_volume" "jenkins-data" {
-  availability_zone = "eu-west-1a"
+  availability_zone = "${var.AWS_REGION}a"
   size              = 20
   type              = "gp2"
   tags = {
