@@ -3,7 +3,7 @@
 #modules/maven-sonarqube-server/.terraform/
 #modules/s3-dynamodb/.terraform/
 #modules/terraform-node/.terraform/
-demo-18b-MODULE-SETUP/dev/.terraform/providers/registry.terraform.io/hashicorp/aws/5.88.0/darwin_amd64/terraform-provider-aws_v5.88.0_x5
+./demo-18b-MODULE-SETUP/dev/.terraform/providers/registry.terraform.io/hashicorp/aws/5.88.0/darwin_amd64/terraform-provider-aws_v5.88.0_x5
 
 # Local .terraform directories
 **/.terraform/*
