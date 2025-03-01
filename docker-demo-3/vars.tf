@@ -3,11 +3,13 @@ variable "AWS_REGION" {
 }
 
 variable "igu-key-private" {
-  default = "~/Downloads/igu-key.pem"
+  //default = "~/Downloads/igu-key.pem"
+  default = "igu-key.pem"
 }
 
 variable "igu-key-public" {
-  default = "~/Downloads/igu-key.pub"
+  //default = "~/Downloads/igu-key.pub"
+  default = "igu-key.pub"
 }
 
 variable "ECS_INSTANCE_TYPE" {
