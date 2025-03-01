@@ -1,3 +1,9 @@
+.terraform/
+#modules/jenkins-server/.terraform/
+#modules/maven-sonarqube-server/.terraform/
+#modules/s3-dynamodb/.terraform/
+#modules/terraform-node/.terraform/
+
 # Local .terraform directories
 **/.terraform/*
 
